@@ -40,7 +40,7 @@ For more information about GNU/LGPL license : http://www.gnu.org
 This library and the associated files are non commercial, non professional work. It should not have unexpected results. However if any damage is caused by this software the author can not be responsible. The use of this software is at the risk of the user.
 
 # 7 - Documentation
-Documentation can be found at 
+Documentation can be found at https://github.com/alfZone/VideoPlayer/wiki
 
 # 8 - Author
 This software was written by António Lira Fernandes (alf@esmonserrate.org) on its leasure time.
