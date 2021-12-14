@@ -1,7 +1,8 @@
 // -------------------------------------------------------------------------------- // @version 1.0 - readme.txt // -----------------------------------------------------------
 // License GNU/LGPL - March 2021 // @author António Lira Fernandes - alf@esmonserrate.org // https://github.com/alfZone // ----------------------------------------------------
 
-0 - Sommaire
+# 0 - Sommaire
+
 1 - Introduction
 2 - What's new
 3 - Corrected bugs
