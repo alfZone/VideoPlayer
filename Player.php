@@ -1,14 +1,8 @@
 <?php
 namespace classes\tv;
 
-require_once __DIR__ . '/../../config.php';
 
-use classes\linguage\Lingua;
-
-//ini_set("error_reporting", E_ALL);
-//include_once $_SERVER['DOCUMENT_ROOT'] . "/config.php"; 
-//include_once $_SERVER['DOCUMENT_ROOT'] . "/classes/ClassLingua.php";
-//define('YOUTUBE_DL', '/usr/local/bin/youtube-dl'); // find your youtube-dl path and replace with it
+define('YOUTUBE_DL', '/usr/local/bin/youtube-dl'); // find your youtube-dl path and replace with it
  
 /**
  * The objective of this classe is to provide a way to see a lista of videos 
@@ -66,10 +60,12 @@ class Player{
 	 */
   public function __construct(){  
 
-    $linguage= new Lingua();
-    $this->texts=$linguage->textsTranslate($this->texts);
+    //$linguage= new Lingua();
+    //$this->texts=$linguage->textsTranslate($this->texts);
     
   }
+  
+  //###################################################################################################################################
   
   private function managerType($link){
     $pattern = '/www.youtube.com/';
@@ -79,7 +75,7 @@ class Player{
     return $link;
   }
   
-  
+  //###################################################################################################################################
     /**
    * Fetches direct URL of given youtube video
    */
@@ -93,6 +89,7 @@ class Player{
   return $direct_url;
    }
   
+  //###################################################################################################################################
   
   private function getReady(){
     $videos=explode(",", $this->listVideos);
@@ -190,7 +187,7 @@ class Player{
     
     //print_r($this->listVideos);
     $this->getReady();
-    $txtauto="autoplay=1";
+    $txtauto="autoplay";
     //echo "autoplay= " . $this->autoplay;
     if ($this->autoplay!="autoplay" && $this->autoplay!=1){
       //echo "<br>entrei aqui";
@@ -207,7 +204,7 @@ class Player{
     
       
 
-      <video class="js-media" width="<?php echo $this->width; ?>" height="<?php echo $this->height; ?>" <?php echo $txtauto; ?>   controls id="<?php echo $this->id; ?>">
+      <video  width="<?php echo $this->width; ?>" height="<?php echo $this->height; ?>" <?php echo $txtauto; ?>   controls id="<?php echo $this->id; ?>">
           <source src="<?php echo $this->first; ?>" type="video/mp4" />
           <?php echo $this->texts["errBrowser"]; ?>
       </video>
